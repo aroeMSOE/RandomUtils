@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    .super-carousel-container{
+      background-color: #f8f5f3;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    .carousel-container{
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    @media(min-width:801px) {
+      .my-carousel div {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 500px;
+      }
+    }
+
+    @media(max-width:800px) {
+      .my-carousel div {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 300px;
+      }
+    }
+
+    @media(max-width:600px) {
+      .my-carousel div {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 0px;
+        visibility: collapse;
+      }
+    }
+
+    .my-carousel div.slick-slide {
+      opacity: 0.75;
+      transition: opacity 0.5s ease;
+    }
+
+    .my-carousel div.slick-center {
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+    
+    .my-carousel img {
+      display: none;
+    }
+  </style>
+
+</head>
+<body>
+
+  
+<div class="super-carousel-container">
+  <div class="carousel-container">
+    <div class="my-carousel mobile-carousel-style">
+      <div style="background-image: url('http://twinbloomsfloralco.com/wp-content/uploads/2023/08/TJ-246-scaled-1.jpg');"></div>
+      <div style="background-image: url('http://twinbloomsfloralco.com/wp-content/uploads/2023/08/249_TO5_1191-scaled.jpg');"></div>
+      <div style="background-image: url('http://twinbloomsfloralco.com/wp-content/uploads/2023/08/AD-62-scaled-1.jpg');"></div>
+      <div style="background-image: url('http://twinbloomsfloralco.com/wp-content/uploads/2023/08/TJ-485-scaled-1.jpg');"></div>
+      <div style="background-image: url('http://twinbloomsfloralco.com/wp-content/uploads/2023/08/427_082821-scaled.jpg');"></div>
+      <div style="background-image: url('http://twinbloomsfloralco.com/wp-content/uploads/2023/08/AD-199-scaled-1.jpg');"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+
+      $(document).ready(function(){
+        $('.my-carousel').slick({
+          slidesToShow: 1,
+          centerPadding: '200px',
+          centerMode: true,
+          dots: false,
+          adaptiveHeight: true,
+          autoplay: true,
+          autoplaySpeed: 2400,
+          accessibility: false,
+          arrows: false,
+          speed: 800,
+          responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      });
+    </script>
+  </div>
+</div>
+
+</body>
+</html>
